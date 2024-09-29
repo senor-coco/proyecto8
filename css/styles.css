@@ -15,10 +15,11 @@ body {
 }
 
 header {
+    position: relative; /* Necesario para posicionar elementos dentro */
     background: url("../imagenes/imagen1baner.png") no-repeat center center;
     background-size: cover;
     text-align: center; /* Centra el texto en el encabezado */
-    padding: 20px 0; /* Espaciado en el encabezado */
+    padding: 60px 0; /* Aumenta el espaciado en la parte superior para dejar espacio para los botones */
 }
 
 header h1 {
@@ -26,6 +27,9 @@ header h1 {
     font-size: 2.5em;
     font-weight: normal;
     color: #f78d14; /* Naranja oscuro */
+    position: relative; /* Para que se mantenga dentro del encabezado */
+    z-index: 1; /* Asegura que esté por encima del fondo */
+    margin-bottom: 20px; /* Espacio entre el título y los botones */
 }
 
 nav {
@@ -34,7 +38,9 @@ nav {
     align-items: center;
     width: 100%; /* Asegura que ocupe el ancho completo */
     height: 50px;
-    margin-top: 10px; /* Espacio entre el encabezado y la navegación */
+    margin-top: 20px; /* Espacio entre el encabezado y la navegación */
+    z-index: 2; /* Asegura que esté por encima del encabezado */
+    position: relative; /* Asegura el contexto de posicionamiento */
 }
 
 nav ul {
@@ -53,11 +59,14 @@ nav a {
     color: #000000; /* Color negro para los enlaces */
     padding: 10px 20px;
     border-radius: 100px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border: 2px solid #0665b3; /* Borde azul oscuro */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
 }
 
 nav a:hover {
     border-bottom: 3.1px solid white; /* Línea blanca al pasar el ratón */
+    background-color: rgba(255, 255, 255, 1); /* Fondo blanco sólido al pasar el ratón */
 }
 
 article, section {
@@ -72,6 +81,11 @@ section {
 
 section p {
     text-align: justify;
+    margin-bottom: 20px; /* Espacio inferior entre párrafos */
+}
+
+h2 {
+    margin-bottom: 15px; /* Espacio inferior debajo de h2 */
 }
 
 aside {
@@ -92,6 +106,7 @@ aside h1 {
 aside p {
     line-height: 30px; /* Mejora la legibilidad */
     color: #333; /* Texto gris oscuro */
+    margin-bottom: 15px; /* Espacio inferior entre párrafos en el aside */
 }
 
 #alumnoperfil {
